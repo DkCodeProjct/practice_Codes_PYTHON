@@ -1,5 +1,3 @@
-from good import fizzbuzz
-
-num = int(input("c"))
-result = fizzbuzz(num)
-print(f"output, {result}", end="")
+user_input = input("type_here* ")
+output = user_input.replace(" ", "..")
+print(f"slow_down! {output}")
