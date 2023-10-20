@@ -1,9 +1,3 @@
-"""
-user_input = input("type_here* ")
-output = user_input.replace(" ", "..")
-print(f"slow_down! {output}")
-"""
-
 def convert(name):
     if name % 2 == 0 and name * 2 > 20:
         print("evenOdd")
