@@ -1,0 +1,15 @@
+def main():
+    dollors = dollorsToFloat(input("meal_Cost: $##:## "))
+    precntg = precntgToFloat(input("tip_Prcentage: ##% "))
+    tip = dollors * precntg
+    print(f"your tip$ {tip:.2f}")
+
+def dollorsToFloat(sign):
+    output0 = float(sign[1:])
+    return output0
+def precntgToFloat(precntSign):
+    output1 = float(precntSign[:-1]) / 100
+    return output1
+
+if __name__ == "__main__":
+    main()
