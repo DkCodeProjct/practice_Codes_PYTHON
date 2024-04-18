@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script >
+        
+        function showPage(page) {
+           
+            document.querySelectorAll('div').forEach(div => {
+                div.style.display = 'none';
+            });
+
+            
+            document.querySelector(`#${page}`).style.display = 'block';
+        }
+
+        
+        document.addEventListener('DOMContentLoaded', function() {
+           
+            document.querySelectorAll('button').forEach(button => {
+                
+                button.onclick = function() {
+                    showPage(this.dataset.page);
+                };
+            });
+        });
+    
+    </script>
+    <style>
+        div {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button data-page="pg1">page 1</button>
+    <button data-page="pg2">page 2</button>
+    <button data-page="pg3">page 3</button>
+
+    <div id="pg1">
+        <h1>this is the page 1</h1>
+    </div>
+
+    <div id="pg2">
+        <h1>this is the page 2</h1>
+    </div>
+
+    <div id="pg3">
+        <h1>this is the page 3</h1>
+    </div>
+</body>
+</html>
